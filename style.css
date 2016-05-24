@@ -5,14 +5,33 @@ body {
 	font: normal 20px Helvetica, Arial, sans-serif;
 	color: #45494d;
 	background: #2f2840 url("images/bg_body.gif") 50% 0 repeat;
+
+}
+
+* {
+	box-sizing: border-box;
 }
 /*Header*/
 header, main, footer {
 	width: 100%;
 	text-align: center;
 }
+header > a {
+	width: 298px;
+	height: 243px;
+	margin: 0 auto;
+	display: block;
+	content: "";
+	background: url(images/logo.png) no-repeat;
+	background-size: cover;
+
+}
+main p {
+	text-align: justify;
+
+}
 nav {
-	padding-bottom: 40px;
+	padding: 20px 0 40px 0;
 }
 nav a {
 	font-size: 26px;
@@ -29,21 +48,26 @@ nav a.selected {
 /*Main*/
 main {
 	background: white;
-	padding: 100px 0 0 0;
+	padding: 100px 0px 100px 0px;
 }
 article {
-	padding: 0 110px 100px 110px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px 0;	
 	text-align: center;
 }
+
 figure {
+	width: 100%;
+	margin: 0;
 	padding: 0 0 55px 0;
 }
 figure img {
+	width: 100%;
 	padding: 0 0 30px 0;
+	display: block;
 }
-h1 {
-	padding: 0 0 50px 0;
-}
+
 h2 {
 	font-size: 36px;
 }
@@ -63,12 +87,15 @@ p {
 	max-width: 770px;
 	margin: 20px auto;
 }
-article ul {
-	padding: 100px 0 30px 0;
+#team ul {
+	padding: 80px 0 30px 0;
 }
-article li {
+#team li {
 	display: inline-block;
-	padding: 0 30px;
+	padding: 0px 25px 20px 25px;
+}
+#team img {
+	padding-bottom: 25px;
 }
 
 a.name {
@@ -116,4 +143,95 @@ footer a {
 }
 .instagram {
 	background-position: 0 100%;
+}
+
+@media screen and (max-width: 865px) {
+	#team li {
+		width: 49%;
+		padding: 20px 20px;
+	}
+	#team li img {
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		padding-top: 65px;
+	}
+	header>h1 {
+		width: 223px;
+		height: 182px;
+	}
+	header a{
+		display: inline-block;
+	}
+	a img{
+		width: 100%;
+	}
+	nav {
+		padding: 0 0 20px 0;
+	}
+	main {
+		padding: 70px 0 70px 0;
+	}
+	main article {
+		padding: 0 20px;
+	}
+	
+}
+@media screen and (max-width: 480px) {
+	body {
+		padding-top: 0;
+	}
+	header {
+		padding: 15px 20px;
+		margin-top: 20px;
+	}
+	header > a{
+		float: left;
+		padding: 10px 0 0 50px;
+		margin: 20px 0 0 0;
+		width: auto;
+		height: 50px;
+		background-size: 90px auto;
+		text-indent: 0px;
+		font-size: 22px;
+		text-decoration: none;
+		color: white;
+		background-position: -20px 0;
+	}
+	header {
+		overflow: hidden;
+	}
+	
+	nav {
+		float: right;
+		width: auto;
+		text-align: right;
+	}
+	nav a {
+		display: block;
+		padding: 5px 0;
+		font-size: 16px;
+
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h2:before,
+	h2:after {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	footer {
+		padding: 20px 0;
+	}
+	footer li {
+		padding: 0 18px;
+	}
+	#team p {
+		padding: 0 30px 40px 30px;
+	}
 }
